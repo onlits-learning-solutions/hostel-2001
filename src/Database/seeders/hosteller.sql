@@ -1,0 +1,2 @@
+INSERT INTO hosteller(name, gender, date_of_birth, contact_no, email) VALUES('Raju Kumar', 'M', '2001-12-25', '9845248754', 'rajukumar@onlits.com');
+INSERT INTO hosteller(name, gender, date_of_birth, contact_no, email) VALUES('Santosh Kumar', 'M', '2001-01-15', '8956471256', 'santoshkumar@onlits.com');
