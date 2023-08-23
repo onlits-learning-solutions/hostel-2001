@@ -1,1 +1,1 @@
-<p>&copy2023, Onlits Technologies LLP</p>
+<p style="color: white; text-align:center; padding-top:10px">&copy2023, Onlits Technologies LLP</p>

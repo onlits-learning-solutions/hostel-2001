@@ -8,7 +8,7 @@ require '../Model/Hosteller.php';
 
 class HostellerController
 {
-    public function index()
+    public static function index()
     {
         return Hosteller::all();
     }

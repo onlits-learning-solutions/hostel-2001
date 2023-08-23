@@ -30,7 +30,7 @@ class Hosteller
 }
 
 
-print_r(Hosteller::all());
-echo "\n";
-print_r(Hosteller::find(2));
-echo "\n";
+// print_r(Hosteller::all());
+// echo "\n";
+// print_r(Hosteller::find(2));
+// echo "\n";
