@@ -15,15 +15,14 @@
         </div>
         <div class="row">
             <aside class="col-2" style="background-color: gray;">
-            <?php require 'sidenav.php'; ?>
+                <?php require 'sidenav.php'; ?>
             </aside>
             <main class="col">
                 <div class="row">
-                    <!-- Main content goes here! -->
-                    <h1>[Layout]</h1>
+                    <?php require $_GET['page'] . '.php' ?>
                 </div>
                 <footer class="row" style="background-color:#33A9FF;">
-                <?php require 'footer.php'; ?>
+                    <?php require 'footer.php'; ?>
                 </footer>
             </main>
         </div>

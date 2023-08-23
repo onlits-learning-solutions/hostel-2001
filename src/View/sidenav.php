@@ -1,4 +1,4 @@
 <nav>
-    <a href="">Hosteller</a>
-    <a href="">Transaction</a>
+    <a href="layout.php?page=hosteller">Hosteller</a>
+    <a href="layout.php?page=transaction">Transaction</a>
 </nav>
