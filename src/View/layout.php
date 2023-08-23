@@ -14,11 +14,11 @@
             <?php require 'topnav.php'; ?>
         </div>
         <div class="row">
-            <aside class="col-2" style="background-color: gray;">
+            <aside class="col-2" style="background-color: lightgray;">
                 <?php require 'sidenav.php'; ?>
             </aside>
             <main class="col">
-                <div class="row">
+                <div class="row" style="padding: 30px;">
                     <?php require $_GET['page'] . '.php' ?>
                 </div>
                 <footer class="row" style="background-color:#33A9FF;">
