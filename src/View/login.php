@@ -1,3 +1,8 @@
+<?php
+if(isset($_POST['login'])) {
+    header('Location:layout.php?page=dashboard');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +24,7 @@
                 <input type="text" name="user_id" id="user_id" class="form-control">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" name="password" id="password" class="form-control"> <br>
-                <button class="btn btn-primary">Login</button>
+                <button name="login" class="btn btn-primary">Login</button>
             </form>
         </div>
     </main>
