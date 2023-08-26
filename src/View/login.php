@@ -1,6 +1,21 @@
 <?php
-if(isset($_POST['login'])) {
-    header('Location:layout.php?page=dashboard');
+
+use Hostel\Controller\UserController;
+
+require '../Controller/UserController.php';
+
+$errormessage = null;
+
+if($_GET['error'] == '99') {
+    $errormessage = 'Invalid username or password! Please retry!';
+}
+
+if (isset($_POST['login'])) {
+    if (UserController::authenticate($_POST)) {
+        header('Location:layout.php?page=dashboard');
+    } else {
+        header('Location:login.php?error=99');
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -21,10 +36,11 @@ if(isset($_POST['login'])) {
         <div class="col">
             <form action="" method="post">
                 <label for="user_id" class="form-label">User Id</label>
-                <input type="text" name="user_id" id="user_id" class="form-control">
+                <input type="text" name="user_id" id="user_id" class="form-control" required>
                 <label for="password" class="form-label">Password</label>
-                <input type="password" name="password" id="password" class="form-control"> <br>
+                <input type="password" name="password" id="password" class="form-control" required> <br>
                 <button name="login" class="btn btn-primary">Login</button>
+                <label for="" style="color: red; margin-left: 30px;"><?= $errormessage ?></label>
             </form>
         </div>
     </main>
