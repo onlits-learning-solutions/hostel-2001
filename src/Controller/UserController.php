@@ -8,7 +8,7 @@ class UserController
 {
     public static function authenticate(array $credentials): bool
     {
-        $connection = new \mysqli(Environment::SERVER, Environment::USERNAME, Environment::PASSWORD, Environment::DATABASE);
+        $connection = new \mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
         $user_id = $credentials['user_id'];
         $password = $credentials['password'];
         $sql = "SELECT password from user WHERE user_id='$user_id' AND password=SHA1('$password')";
