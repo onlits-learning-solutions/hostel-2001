@@ -1,10 +1,9 @@
 <?php
 
-use Hostel\Model\Hosteller;
+use Hostel\Controller\HostellerController;
 
-require '../Model/Hosteller.php';
 
-$hostellers = Hosteller::all();
+$hostellers = HostellerController::index();
 
 ?>
 

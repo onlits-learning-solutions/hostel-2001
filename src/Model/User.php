@@ -2,7 +2,7 @@
 
 namespace Hostel\Model;
 
-require 'Model.php';
+use Hostel\Model\Model;
 
 class User
 {
@@ -19,8 +19,3 @@ class User
         return Model::find($id, 'user');
     }
 }
-
-print_r(User::all());
-echo '\n';
-print_r(User::find('root'));
-echo '\n';

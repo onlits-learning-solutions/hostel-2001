@@ -2,7 +2,7 @@
 
 namespace Hostel\Model;
 
-require 'Model.php';
+use Hostel\Model\Model;
 
 class Hosteller
 {
@@ -28,9 +28,3 @@ class Hosteller
 
     }
 }
-
-
-// print_r(Hosteller::all());
-// echo "\n";
-// print_r(Hosteller::find(2));
-// echo "\n";
