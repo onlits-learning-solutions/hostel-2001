@@ -1,9 +1,10 @@
 {
     "autoload": {
-        "classmap": [
-            "src/Model",
-            "src/Controller"
-        ]
+        "files": ["src/env.php"],
+        "psr-4": {
+            "Hostel\\Model\\": "src/Model",
+            "Hostel\\Controller\\": "src/Controller"
+        }
     },
     "require-dev": {
         "phpunit/phpunit": "^10.3"

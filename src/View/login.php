@@ -1,13 +1,14 @@
 <?php
+require '../../vendor/autoload.php';
 
 use Hostel\Controller\UserController;
 
-require '../Controller/UserController.php';
-
 $errormessage = null;
 
-if($_GET['error'] == '99') {
-    $errormessage = 'Invalid username or password! Please retry!';
+if ($_GET['error']) {
+    if ($_GET['error'] == '99') {
+        $errormessage = 'Invalid username or password! Please retry!';
+    }
 }
 
 if (isset($_POST['login'])) {

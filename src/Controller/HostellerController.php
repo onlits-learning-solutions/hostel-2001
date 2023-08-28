@@ -4,8 +4,6 @@ namespace Hostel\Controller;
 
 use Hostel\Model\Hosteller;
 
-require '../Model/Hosteller.php';
-
 class HostellerController
 {
     public static function index()
@@ -33,7 +31,3 @@ class HostellerController
 
     }
 }
-
-
-$hc = new HostellerController();
-$hc->index();
