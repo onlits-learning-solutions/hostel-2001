@@ -23,6 +23,11 @@ class Hosteller
         return Model::find($id, 'hosteller');
     }
 
+    public static function countAll()
+    {
+        return Model::countAll('hosteller');
+    }
+
     public function save()
     {
 
