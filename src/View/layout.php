@@ -24,7 +24,7 @@ require '../../vendor/autoload.php';
                 <div class="row" style="padding: 30px;">
                     <?php require $_GET['page'] . '.php' ?>
                 </div>
-                <footer class="row" style="background-color:#33A9FF;">
+                <footer class="row" style="background-color:#33A9FF; position:fixed; bottom:0; width:85%">
                     <?php require 'footer.php'; ?>
                 </footer>
             </main>

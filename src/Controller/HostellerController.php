@@ -13,21 +13,26 @@ class HostellerController
 
     public function details($id)
     {
-
+        // return view();
     }
 
-    public function create()
+    public static function create(Request $request): void
     {
-
+        $hosteller = new Hosteller();
+        $hosteller->name = $request->name;
+        $hosteller->gender = $request->gender;
+        $hosteller->date_of_birth = $request->date_of_birth;
+        $hosteller->contact_no = $request->contact_no;
+        $hosteller->email = $request->email;
+        $hosteller->save();
+        header('Location:/hosteller');
     }
 
     public function update($id)
     {
-
     }
 
     public function delete($d)
     {
-
     }
 }

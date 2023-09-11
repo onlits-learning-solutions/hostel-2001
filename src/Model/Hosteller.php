@@ -6,30 +6,37 @@ use Hostel\Model\Model;
 
 class Hosteller
 {
-    private $id;
-    private $name;
-    private $gender;
-    private $date_of_birth;
-    private $contact_no;
-    private $email;
+    public int $id;
+    public string $name;
+    public string $gender;
+    public string $date_of_birth;
+    public string $contact_no;
+    public string $email;
 
-    public static function all()
+    public static function all(): array|null
     {
         return Model::all('hosteller');
     }
 
-    public static function find($id)
+    public static function find($id): Hosteller|null
     {
         return Model::find($id, 'hosteller');
     }
 
-    public static function countAll()
+    public function save(): void
     {
-        return Model::countAll('hosteller');
+        $connection = new \mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
+        $sql = "INSERT INTO hosteller(name, gender, date_of_birth, contact_no, email) VALUES('$this->name','$this->gender','$this->date_of_birth','$this->contact_no','$this->email')";
+        $connection->query($sql);
     }
 
-    public function save()
+    public function update(): void
     {
+        
+    }
 
+    public static function countAll(): int
+    {
+        return Model::countAll('hosteller');
     }
 }

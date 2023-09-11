@@ -6,7 +6,7 @@ use Hostel\Environment;
 
 class Model
 {
-    public static function all(string $table): array
+    public static function all(string $table): array|null
     {
         $connection = new \mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
         $sql = "SELECT * FROM $table";
@@ -17,7 +17,7 @@ class Model
             return null;
     }
 
-    public static function find($id, string $table): array
+    public static function find($id, string $table): array|null
     {
         $connection = new \mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
         $sql = "SELECT * FROM $table WHERE id='$id'";
